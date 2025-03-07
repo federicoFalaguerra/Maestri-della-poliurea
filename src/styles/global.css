@@ -1,1 +1,46 @@
+@import url("https://use.typekit.net/epp0psk.css");
 @import "tailwindcss";
+
+@theme {
+  --text-xs: clamp(0.75rem, 0.9vw, 1rem);
+  --text-sm: clamp(0.875rem, 1vw, 1.25rem);
+  --text-base: clamp(0.9rem, 1.2vw, 1rem);
+  --text-lg: clamp(1.5rem, 2vw, 2rem);
+  --text-xl: clamp(2rem, 2.5vw, 3rem);
+}
+
+@layer utilities {
+  @media (width <= 80rem) {
+    .container {
+      @apply max-w-full;
+    }
+  }
+}
+
+* {
+    font-family: "inter-variable", sans-serif;
+}
+
+
+.btn-preventivo {
+  background-color: #85BF31;
+}
+
+.active span {
+  background-color: white;
+}
+
+.active span:nth-child(1) { /* Barra superiore */
+  transform: translateY(6px) rotate(45deg);
+}
+.active span:nth-child(2) { /* Barra centrale */
+  opacity: 0;
+}
+.active span:nth-child(3) { /* Barra inferiore */
+  transform: translateY(-6px) rotate(-45deg);
+
+}
+
+.menu-mobile {
+  background-color: #103D51;
+}

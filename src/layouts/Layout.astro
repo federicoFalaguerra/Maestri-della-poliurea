@@ -1,3 +1,9 @@
+---
+import "../styles/global.css";
+// Importa il file JS
+import '../data/main.js';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -10,6 +16,10 @@
 	</head>
 	<body>
 		<slot />
+		
+		<script>
+			import "../data/main.js";
+		  </script>
 	</body>
 </html>
 
