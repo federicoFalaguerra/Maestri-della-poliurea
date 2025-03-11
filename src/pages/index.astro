@@ -1,9 +1,17 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Hero from '../components/Hero.astro';
+import Bullets from '../components/Bullets.astro'
+import RowColumns from '../components/RowColumns.astro'
+import ProContro from '../components/ProContro.astro'
 
 import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
+import videoOne from '../assets/hero-video.webm?url'
+import Check from '../assets/icone/check.svg?url'
+import imageColumn from '../assets/poliurea-soluzione-definitiva.webp?url'
+
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -11,4 +19,44 @@ import "../styles/global.css";
 
 <Layout>
 	<Header></Header>
+	<Hero></Hero>
+	<Bullets></Bullets>
+	<RowColumns
+	source={videoOne}
+	bgColor="#103d51"
+	reverse={true}
+	>
+	<h3 class="text-xl font-bold text-gray-50 leading-[1.2]">Tipologie di immobili <br>su cui possiamo aiutarti</h3>
+	<p class="text-medium text-gray-50 mt-5">Le soluzioni di impermeabilizzazione di Maestri della Poliurea <br>si adattano a diverse situazioni e tipologie di immobili. <br>Ecco alcune delle possibili applicazioni:</p>
+	<ul class="mt-3 w-full lg:w-8/12">
+		<li class="text-gray-50 flex items-center text-base font-semibold py-4 border-b-[1px] border-solid border-gray-400"><span><img src={Check} width="30" class="mr-3"/></span>Capannoni</li>
+		<li class="text-gray-50 flex items-center text-base font-semibold py-4 border-b-[1px] border-solid border-gray-400"><span><img src={Check} width="30" class="mr-3"/></span>Coperture e tetti piani
+		</li>
+		<li class="text-gray-50 flex items-center text-base font-semibold py-4 border-b-[1px] border-solid border-gray-400"><span><img src={Check} width="30" class="mr-3"/></span>Magazzino/Deposito
+		</li>
+		<li class="text-gray-50 flex items-center text-base font-semibold py-4 border-b-[1px] border-solid border-gray-400"><span><img src={Check} width="30" class="mr-3"/></span>Parcheggi e Garage interrati
+		</li>
+		<li class="text-gray-50 flex items-center text-base font-semibold py-4 border-b-[1px] border-solid border-gray-400"><span><img src={Check} width="30" class="mr-3"/></span>Pavimenti Industriali e Commerciali
+		</li>
+		<li class="text-gray-50 flex items-center text-base font-semibold py-4 border-b-[1px] border-solid border-gray-400"><span><img src={Check} width="30" class="mr-3"/></span>Edifici pubblici e statali
+		</li>
+		<li class="text-gray-50 flex items-center text-base font-semibold py-4"><span><img src={Check} width="30" class="mr-3"/></span>Altri tipologie di edifici industriali
+		</li>
+
+
+	</ul>
+	</RowColumns>
+	<RowColumns
+	source={imageColumn}
+	bgColor="#ffffff"
+	reverse={false}
+	>
+	<h3 class="text-xl font-bold leading-[1.2] text-gray-800">Poliurea a spruzzo: <br>la soluzione definitiva</h3>
+	<p class="text-medium mt-5 text-gray-800">La poliurea a spruzzo di Krypton Chemical è una soluzione premium per l’impermeabilizzazione. La sua formula brevettata offre protezione superiore e maggiore durata rispetto alle guaine bituminose, che necessitano di frequente manutenzione e sono meno efficaci.<br><br>
+
+		Asciuga rapidamente, si adatta alle variazioni strutturali e resiste a condizioni climatiche estreme e agenti chimici. Questa tecnologia non solo riduce i tempi di lavorazione ma garantisce anche risultati duraturi, supportati da una garanzia decennale.<br><br>
+		
+		Solo i posatori certificati di Maestri della Poliurea possono applicare questo materiale ottimizzando il tuo investimento.</p>
+	</RowColumns>
+	<ProContro></ProContro>
 </Layout>

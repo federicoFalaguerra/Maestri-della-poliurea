@@ -1,0 +1,21 @@
+---
+const {source, bgColor, reverse} = Astro.props;
+const isVideo = source && (source.endsWith('.mp4') || source.endsWith('.webm'));
+
+---
+
+<section class="row flex justify-center mt-12 px-6" data-aos="fade-up">
+    <div class=`lg:p-20 p-8 container flex justify-between items-center gap-10 aos-init aos-animate rounded-3xl ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} flex-col` style={`background-color: ${bgColor};`}
+    data-aos="fade-up">
+        <div class="lg:w-1/2 w-full column">
+            {isVideo ? (
+                <video src={source} autoplay muted loop playsinline class="rounded-2xl"></video>
+              ) : (
+                <img src={source} alt="Media" class="rounded-2xl w-full aspect-square object-cover" />
+              )}
+        </div>
+        <div class="lg:w-1/2 w-full column">
+            <slot />
+        </div>
+    </div>
+</section>

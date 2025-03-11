@@ -1,12 +1,16 @@
-@import url("https://use.typekit.net/epp0psk.css");
 @import "tailwindcss";
 
 @theme {
   --text-xs: clamp(0.75rem, 0.9vw, 1rem);
   --text-sm: clamp(0.875rem, 1vw, 1.25rem);
   --text-base: clamp(0.9rem, 1.2vw, 1rem);
+  --text-medium: clamp(1rem, 1.3vw, 1.3rem);
+  --text-l: clamp(1.2rem, 1.2vw, 1.4rem);
   --text-lg: clamp(1.5rem, 2vw, 2rem);
-  --text-xl: clamp(2rem, 2.5vw, 3rem);
+  --text-xl: clamp(1.5rem, 2.5vw, 2.5rem);
+  --text-xxl: clamp(2rem, 2.7vw, 3rem);
+  --text-xxxl: clamp(2.5rem, 3vw, 3.5rem);
+
 }
 
 @layer utilities {
@@ -17,8 +21,14 @@
   }
 }
 
+/*
 * {
     font-family: "inter-variable", sans-serif;
+}
+
+*/
+body {
+  background-color: #F1F1EC;
 }
 
 
@@ -31,16 +41,22 @@
 }
 
 .active span:nth-child(1) { /* Barra superiore */
-  transform: translateY(6px) rotate(45deg);
+  transform: translateY(9px) rotate(45deg);
 }
 .active span:nth-child(2) { /* Barra centrale */
   opacity: 0;
 }
 .active span:nth-child(3) { /* Barra inferiore */
-  transform: translateY(-6px) rotate(-45deg);
+  transform: translateY(-9px) rotate(-45deg);
 
 }
 
 .menu-mobile {
   background-color: #103D51;
 }
+
+.text-shadow {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+

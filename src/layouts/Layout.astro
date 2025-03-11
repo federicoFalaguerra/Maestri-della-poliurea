@@ -2,6 +2,7 @@
 import "../styles/global.css";
 // Importa il file JS
 import '../data/main.js';
+import '../data/aos.js'
 ---
 
 <!doctype html>
@@ -12,13 +13,13 @@ import '../data/main.js';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
-		<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@3.0.0/dist/flowbite.min.js"></script>
 	</head>
 	<body>
 		<slot />
 		
 		<script>
 			import "../data/main.js";
+			import '../data/aos.js'
 		  </script>
 	</body>
 </html>

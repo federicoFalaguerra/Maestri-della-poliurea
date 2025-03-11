@@ -1,0 +1,27 @@
+---
+import VideoHero from '../assets/hero-video-deskt.webm?url'
+import VideoHeroMobile from '../assets/hero-video.webm?url'
+
+---
+
+<section class="hero flex justify-center mt-12 rounded-3xl px-6" data-aos="fade-up">
+    <div class="container relative">
+        <video autoplay loop muted playsinline class="w-full object-cover rounded-3xl hidden md:block">
+            <source src={VideoHero} type="video/mp4">
+            Il tuo browser non supporta i video HTML5.
+        </video>
+
+        <video autoplay loop muted playsinline class="w-full object-cover rounded-3xl md:hidden h-[70dvh]">
+            <source src={VideoHeroMobile} type="video/mp4">
+            Il tuo browser non supporta i video HTML5.
+        </video>
+        
+        <div class="hero-title absolute top-[50%]  z-20 lg:pl-20 lg:p-10 translate-y-[-50%] px-4">
+            <h2 class="lg:text-l text-xl text-gray-50 font-semibold text-shadow">Problemi di infiltrazione?</h2>
+            <h1 class="text-xxxl text-gray-50 font-bold leading-13 my-4 text-shadow">Risolvili con la Poliurea a Spruzzo</h1>
+            <h2 class="lg:text-medium text-gray-50 text-l">Maestri della Poliurea è una rete di esperti nell'impermeabilizzazione di capannoni,<br class="hidden lg:block"> edifici industriali, commerciali e strutture pubbliche.<br>
+                *Servizio disponibile solo per aziende ed enti pubblici</h2>
+        </div>
+        <div class="absolute top-0 left-0 w-full h-full bg-black/70 rounded-3xl"></div>
+    </div>
+</section>
