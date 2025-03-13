@@ -1,0 +1,32 @@
+---
+import Aziende from '../assets/aziende.jpg?url'
+import Professionisti from '../assets/professionisti.webp?url'
+import EntiPubblici from '../assets/enti-pubblici.webp?url'
+
+
+const cards = [
+    {title: 'Aziende', image: Aziende },
+    {title: 'Professionisti', image: Professionisti },
+    {title: 'Enti Pubblici', image: EntiPubblici }
+]
+---
+
+<section class="flex justify-center mt-18 px-6 pb-6">
+    <div class="container">
+        <h3 class="text-xxl text-center font-bold text-gray-800 leading-[1.2]">A chi è rivolto il Nostro Servizio</h3>
+        <div class="flex lg:flex-row flex-col gap-10 mt-10">
+            {cards.map(card => (
+                <div class="relative group" key={card.title}>
+                    {/* Immagine con overlay */}
+                    <div class="relative overflow-hidden rounded-3xl">
+                        <img src={card.image} alt={card.title} class="rounded-3xl transition-all duration-300 group-hover:brightness-50" />
+                    </div>
+                    {/* Titolo con effetto hover */}
+                    <h4 class="absolute bottom-0 left-0 right-0 text-l font-semibold text-center p-5 text-white bg-[#103d51] rounded-3xl transition-all duration-300 lg:group-hover:bg-white lg:group-hover:text-[#103d51]">
+                        {card.title}
+                    </h4>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>

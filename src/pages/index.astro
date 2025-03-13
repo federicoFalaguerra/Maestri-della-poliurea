@@ -5,12 +5,16 @@ import Hero from '../components/Hero.astro';
 import Bullets from '../components/Bullets.astro'
 import RowColumns from '../components/RowColumns.astro'
 import ProContro from '../components/ProContro.astro'
+import Rivolto from '../components/Rivolto.astro'
 
 import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
 import videoOne from '../assets/hero-video.webm?url'
+import processoApplicazione from '../assets/processo-di-applicazione.webm?url'
 import Check from '../assets/icone/check.svg?url'
 import imageColumn from '../assets/poliurea-soluzione-definitiva.webp?url'
+import Garanzia from '../assets/garanzia.jpg?url'
+import ChiSiamoImg from '../assets/chi-siamo.jpg?url'
 
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -59,4 +63,37 @@ import imageColumn from '../assets/poliurea-soluzione-definitiva.webp?url'
 		Solo i posatori certificati di Maestri della Poliurea possono applicare questo materiale ottimizzando il tuo investimento.</p>
 	</RowColumns>
 	<ProContro></ProContro>
+
+	<RowColumns
+	source={processoApplicazione}
+	bgColor="#103d51"
+	reverse={true}
+	>
+	<h3 class="text-xl font-bold leading-[1.2] text-gray-50">Il processo di Applicazione</h3>
+	<p class="text-medium mt-5 text-gray-50">Con Maestri della Poliurea, la protezione del tuo immobile è garantita per un decennio. La nostra rete di posatori certificati Krypton Chemical utilizza esclusivamente materiali di punta, protetti da brevetti per l’impermeabilizzazione a spruzzo.<br><br>
+		Grazie all’esperienza e alla tecnologia avanzata dei nostri specialisti, offriamo una garanzia di 10 anni che riflette la nostra fiducia nella qualità e durata delle soluzioni impiegate, proteggendo il tuo investimento nel tempo.</p>
+	</RowColumns>
+
+	<RowColumns
+	source={Garanzia}
+	bgColor="#ffffff"
+	reverse={false}
+	>
+	<h3 class="text-xl font-bold leading-[1.2] text-gray-800">Garanzia 10 Anni	</h3>
+	<p class="text-medium mt-5 text-gray-800">Con Maestri della Poliurea, la protezione del tuo immobile è garantita per un decennio. La nostra rete di posatori certificati Krypton Chemical utilizza esclusivamente materiali di punta, protetti da brevetti per l’impermeabilizzazione a spruzzo.<br><br>
+		Grazie all’esperienza e alla tecnologia avanzata dei nostri specialisti, offriamo una garanzia di 10 anni che riflette la nostra fiducia nella qualità e durata delle soluzioni impiegate, proteggendo il tuo investimento nel tempo.</p>
+	</RowColumns>
+	<Rivolto></Rivolto>
+
+	<RowColumns
+	source={ChiSiamoImg}
+	bgColor="#103d51"
+	reverse={true}
+	>
+	<h3 class="text-xl font-bold leading-[1.2] text-gray-50">Chi Siamo	</h3>
+	<p class="text-medium mt-5 text-gray-50">Maestri della Poliurea è una rete di esperti in soluzioni di impermeabilizzazione tramite poliurea a spruzzo per il settore industriale e commerciale. Distributori esclusivi di Krypton Chemical in Italia, usiamo materiali avanzati e brevettati per prestazioni superiori.<br><br>
+	Ogni tecnico è selezionato e certificato, garantendo professionalità e rispetto degli alti standard in ogni progetto. Ci impegniamo a fornire soluzioni efficienti e sostenibili, personalizzate per le esigenze dei clienti.<br><br>
+	Guidati dalla passione per l’innovazione e un’impeccabile reputazione, Maestri della Poliurea è il partner ideale per garantire la durabilità e l’affidabilità del tuo investimento..</p>
+	</RowColumns>
+
 </Layout>
