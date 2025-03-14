@@ -1,0 +1,26 @@
+---
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+const { images = [] } = Astro.props;
+---
+
+<div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center hidden z-50">
+  <div class="relative max-w-3xl w-full">
+    <button id="close-lightbox" class="absolute top-2 right-2 text-white text-2xl">✖</button>
+
+    <div class="swiper lightbox-slider">
+      <div class="swiper-wrapper">
+        {images.map((img, index) => (
+          <div class="swiper-slide" key={index}>
+            <img src={img.src} alt={img.alt} class="w-full h-auto max-h-[80vh] object-contain" />
+          </div>
+        ))}
+      </div>
+
+      <div class="swiper-button-prev text-white"></div>
+      <div class="swiper-button-next text-white"></div>
+    </div>
+  </div>
+</div>

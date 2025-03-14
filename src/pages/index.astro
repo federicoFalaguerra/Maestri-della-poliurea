@@ -6,6 +6,8 @@ import Bullets from '../components/Bullets.astro'
 import RowColumns from '../components/RowColumns.astro'
 import ProContro from '../components/ProContro.astro'
 import Rivolto from '../components/Rivolto.astro'
+import Certificazione from '../components/Certificazione.astro'
+import Gallery from '../components/Gallery.astro'
 
 import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
@@ -15,6 +17,20 @@ import Check from '../assets/icone/check.svg?url'
 import imageColumn from '../assets/poliurea-soluzione-definitiva.webp?url'
 import Garanzia from '../assets/garanzia.jpg?url'
 import ChiSiamoImg from '../assets/chi-siamo.jpg?url'
+const GalleryImages = [
+	{src: "src/assets/gallery/1.webp?url"},
+	{src: "src/assets/gallery/2.webp?url"},
+	{src: "src/assets/gallery/3.webp?url"},
+	{src: "src/assets/gallery/4.webp?url"},
+	{src: "src/assets/gallery/5.webp?url"},
+	{src: "src/assets/gallery/6.webp?url"},
+	{src: "src/assets/gallery/7.webp?url"},
+	{src: "src/assets/gallery/8.webp?url"},
+	{src: "src/assets/gallery/9.webp?url"},
+	{src: "src/assets/gallery/10.webp?url"},
+	{src: "src/assets/gallery/11.webp?url"},
+	{src: "src/assets/gallery/12.webp?url"}
+]
 
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -95,5 +111,7 @@ import ChiSiamoImg from '../assets/chi-siamo.jpg?url'
 	Ogni tecnico è selezionato e certificato, garantendo professionalità e rispetto degli alti standard in ogni progetto. Ci impegniamo a fornire soluzioni efficienti e sostenibili, personalizzate per le esigenze dei clienti.<br><br>
 	Guidati dalla passione per l’innovazione e un’impeccabile reputazione, Maestri della Poliurea è il partner ideale per garantire la durabilità e l’affidabilità del tuo investimento..</p>
 	</RowColumns>
+	<Certificazione></Certificazione>
+	<Gallery images={GalleryImages}></Gallery>
 
 </Layout>

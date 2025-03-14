@@ -1,0 +1,26 @@
+---
+import Carousel from '../components/Carousel.astro';
+
+const homepageSlides = [
+  { id: 1, image: '../src/assets/certificazioni/1.webp' },
+  { id: 2, image: '../src/assets/certificazioni/2.webp' },
+  { id: 3, image: '../src/assets/certificazioni/3.webp' },
+  { id: 4, image: '../src/assets/certificazioni/4.webp' },
+  { id: 5, image: '../src/assets/certificazioni/5.webp' },
+  { id: 6, image: '../src/assets/certificazioni/6.webp' },
+  { id: 7, image: '../src/assets/certificazioni/7.webp' },
+  { id: 8, image: '../src/assets/certificazioni/8.webp' },
+  { id: 9, image: '../src/assets/certificazioni/9.webp' },
+  { id: 10, image: '../src/assets/certificazioni/10.webp' },
+  
+
+];
+---
+<section class="row flex justify-center mt-12 px-6 aos-init aos-animate">
+    <div class="lg:p-20 md:p-8 p-4 container gap-10 aos-init aos-animate rounded-3xl">
+        <h3 class="text-xxl text-center font-bold text-gray-800 leading-[1.2]">Le nostre Certificazioni</h3>
+        <p class="text-medium mt-5 text-gray-800 text-center lg:mt-10 md:w-8/12 ml-auto mr-auto">Con Maestri della Poliurea, la qualità e la sicurezza sono priorità assolute. Le nostre certificazioni da enti riconosciuti a livello internazionale, come ISO 9001, Bureau Veritas, e TÜV SÜD, testimoniano il nostro impegno verso standard impeccabili. Attraverso rigorosi controlli e processi conformi, garantiamo che ogni progetto rispetti le normative vigenti e superi le aspettative dei nostri clienti. Con Maestri della Poliurea, la tua fiducia è certificata.</p>
+        <Carousel slides={homepageSlides} slidesPerView={5} />
+    </div>  
+</section>
+

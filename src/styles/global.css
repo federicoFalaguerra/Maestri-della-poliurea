@@ -59,4 +59,8 @@ body {
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
+/* CAROSELLO */
 
+.swiper-pagination-bullet-active {
+  background-color: #103d51;
+}

@@ -1,0 +1,22 @@
+---
+import Lightbox from './Lightbox.astro';
+
+const { images = [] } = Astro.props;
+---
+<section class="gallery mt-12 flex justify-center">
+  <div class="lg:p-20 p-8 container gap-10 aos-init aos-animate rounded-3xl">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      {images.map((img, index) => (
+        <img 
+          key={index}
+          src={img.src} 
+          alt={img.alt} 
+          class="cursor-pointer rounded-lg object-cover w-full h-40 md:h-56"
+          data-index={index} 
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
+<Lightbox images={images} />
