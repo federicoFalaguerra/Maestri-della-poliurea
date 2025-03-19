@@ -3,14 +3,16 @@ import Lightbox from './Lightbox.astro';
 
 const { images = [] } = Astro.props;
 ---
-<section class="gallery mt-12 flex justify-center">
+<section class="gallery mt-12 flex justify-center px-6">
   <div class="lg:p-20 p-8 container gap-10 aos-init aos-animate rounded-3xl">
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <h3 class="text-xxl text-center font-bold text-gray-800 leading-[1.2]">I nostri lavori </h3>
+
+    <div class="grid lg:grid-cols-3 md:grid-cols-3 gap-4 mt-10">
       {images.map((img, index) => (
         <img 
           key={index}
           src={img.src} 
-          alt={img.alt} 
+          alt="immagine lavoro" 
           class="cursor-pointer rounded-lg object-cover w-full h-40 md:h-56"
           data-index={index} 
         />

@@ -1,0 +1,20 @@
+---
+import Perseo from '../assets/logo-perseo.svg?url'
+---
+<section class="credits p-8 bg-gray-900 mt-20 text-center">
+    <div class="container flex font-bold justify-center text-base"><span class="text-gray-200">Web Marketing a cura di:</span> <img src={Perseo} alt="logo creatore" class="w-[20px] mx-2"/><span class="text-[#EC6537]"><a href="https://bit.ly/Perseo_Marketing" target="_blank">Perseo Marketing Srl</a></span></div>
+    </section>
+<footer class="bg-gray-800 p-10">
+    <div class="container flex  justify-between">
+        <div class="text-gray-200">P.IVA: IT12513170014 | <span class="year"></span> &copy; All rights reserved | Maestri Della Poliurea</div>
+        <div class="text-gray-200">
+            <a href="https://www.iubenda.com/privacy-policy/93512921" target="_blank">Privacy Policy</a>  <a href="https://www.iubenda.com/privacy-policy/93512921/cookie-policy" target="_blank">Cookie Policy</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    let data = new Date().getFullYear();
+    let anno = document.querySelector('.year');
+    anno.innerHTML = `${data}`;
+</script>

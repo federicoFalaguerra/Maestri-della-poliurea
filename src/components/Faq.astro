@@ -1,0 +1,31 @@
+---
+import arrowFaq from "../assets/icone/arrow-down-solid.svg?url";
+
+const faqs = [
+    {question: "Quali sono i vantaggi della poliurea rispetto ad altri rivestimenti?", answer: "La poliurea offre una rapida polimerizzazione, una resistenza eccezionale agli urti e una maggiore flessibilità rispetto ad altri rivestimenti tradizionali come l’epossidico. Inoltre, ha una lunga durata e può essere applicata su una vasta gamma di superfici."},
+    {question: "La poliurea è sicura per l'ambiente?", answer: "Sì, la poliurea è considerata sicura per l’ambiente una volta indurita. Non contiene solventi volatili nocivi e ha una bassa emissione di composti organici volatili (VOC), rendendola una scelta ecologica per rivestimenti protettivi."},
+    {question: "La poliurea richiede manutenzione?", answer: "La poliurea è nota per la sua resistenza e durata. Tuttavia, una corretta manutenzione può prolungarne ulteriormente la vita utile per decine e decine di anni avvenire."},
+    {question: "La poliurea è adatta per l'uso in ambienti industriali?", answer: "Sì, la poliurea è ampiamente utilizzata in ambienti industriali grazie alla sua resistenza chimica, alla capacità di sopportare temperature estreme e alla sua durabilità. È particolarmente efficace per proteggere strutture esposte a sostanze chimiche aggressive e usura meccanica."},
+    {question: "Quanto tempo ci vuole per indurire la poliurea dopo l'applicazione?", answer: "La poliurea ha un tempo di indurimento molto rapido, solitamente nell’ordine dei secondi o dei minuti, a seconda della formulazione e delle condizioni ambientali. Questo consente una rapida riapertura delle aree trattate dopo l’applicazione."},
+    {question: "La poliurea può essere colorata?", answer: "Sì, la poliurea può essere pigmentata per ottenere una vasta gamma di colori. Questo consente di personalizzare l’aspetto estetico del rivestimento in base alle preferenze del cliente o ai requisiti del progetto."},
+    {question: "La poliurea è resistente ai raggi UV?", answer: "Sì, molte formulazioni di poliurea sono progettate per resistere ai danni causati dai raggi UV. Questa resistenza contribuisce alla sua longevità e alla sua capacità di mantenere le sue proprietà protettive anche in ambienti esterni esposti alla luce solare diretta."},
+    {question: "La poliurea è adatta per rivestire piscine e vasche da bagno?", answer: "Sì, la poliurea è una scelta popolare per rivestire piscine e vasche da bagno grazie alla sua impermeabilità e resistenza chimica. Forma un rivestimento continuo e sigillato che protegge efficacemente la struttura sottostante dall’acqua e dai prodotti chimici utilizzati nel trattamento dell’acqua."},
+    {question: "La poliurea può essere utilizzata per rivestire superfici verticali?", answer: "Sì, la poliurea può essere applicata con successo su superfici verticali. La sua consistenza auto-livellante e la capacità di aderire saldamente alle superfici consentono una facile applicazione anche su pareti e altre superfici verticali senza gocciolamenti o scivolamenti."},
+    {question: "La poliurea può essere applicata su superfici già rivestite con altri materiali?", answer: "In molti casi, sì. La poliurea può essere applicata su una varietà di substrati, compresi metalli, legno, calcestruzzo e altri rivestimenti. Tuttavia, è importante garantire che la superficie sia adeguatamente preparata e compatibile con la poliurea per garantire un’adesione ottimale e prestazioni durature."},
+];
+---
+
+
+<section class="mt-18 pb-6 px-6 flex justify-center">
+    <div class="container flex flex-col lg:w-7/12 w-12/12">
+        <h3 class="text-xxl text-center font-bold text-gray-800 leading-[1.2]">Domande frequenti sulla<br> Poliurea a Spruzzo</h3>
+        <div class="mt-10 rounded-3xl">
+            {faqs.map((faq, index) => (
+                <div class="faq-item p-5 border-solid border-b-[1px] border-gray-300 shadow-md rounded-2xl mt-5 cursor-pointer">
+                    <h4 class="faq-toggle text-l font-semibold text-gray-800 flex transition duration-300 cursor-pointer"> <img src={arrowFaq} class="w-[12px] mr-3 faq-icon transition duration-300" alt="freccia FAQ"/> {faq.question}</h4>
+                    <p class="faq-answer text-gray-600 opacity-0 transition duration-100 overflow-hidden h-0 text-medium lg:text-base">{faq.answer}</p>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>

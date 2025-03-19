@@ -4,14 +4,14 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 
-const { slides = [], slidesPerView = 3 } = Astro.props;
+const { slides = [], slidesPerView = 5 } = Astro.props;
 ---
 
-<div class="swiper w-full h-[20dvh]" data-slides-per-view={slidesPerView}>
+<div class="swiper-carousel w-full h-[20dvh]" data-slides-per-view={slidesPerView}>
   <div class="swiper-wrapper items-center">
     {slides.map(slide => (
       <div class="swiper-slide h-auto" key={slide.id} style="height: auto;">
-        <img src={slide.image} alt={slide.title} class="w-[120px] rounded-xl object-cover m-auto" width="50"/>
+        <img src={slide.image} alt="bollo certificazione" class="w-[120px] rounded-xl object-cover m-auto" width="50"/>
       </div>
     ))}
   </div>
@@ -20,12 +20,12 @@ const { slides = [], slidesPerView = 3 } = Astro.props;
   <div class="swiper-pagination"></div>
 </div>
 
-<!-- Inizializzazione lato client -->
+<!-- Inizializzazione lato client 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     import('swiper').then(({ default: Swiper }) => {
       import('swiper/modules').then(({ Pagination, Navigation }) => {
-        const swiperContainer = document.querySelector('.swiper');
+        const swiperContainer = document.querySelector('.swiper-carousel');
         const slidesPerView = parseInt(swiperContainer.getAttribute('data-slides-per-view')) || 3;
         const autoplayDelay = parseInt(swiperContainer.getAttribute('data-autoplay-delay')) || 3000;
 
@@ -42,3 +42,5 @@ const { slides = [], slidesPerView = 3 } = Astro.props;
     });
   });
 </script>
+
+ -->

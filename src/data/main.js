@@ -12,6 +12,8 @@ if (isBrowser) {
     lightbox: null,
     lightboxSwiper: null,
     currentSlideIndex: 0, // Memorizza l'indice corrente
+    carouselSwiper: null,
+    closeLightBoxButton: null,
 
     init: function () {
       // HEADER
@@ -22,23 +24,72 @@ if (isBrowser) {
       this.navigation = document.querySelector('.menu-items');
       this.logo = document.querySelector('.logo');
       this.body = document.querySelector('body');
+      this.closeLightBoxButton = document.querySelector('#close-lightbox');
       
       // LIGHTBOX
       this.lightbox = document.getElementById("lightbox");
 
+      // CAROUSEL
+      this.initSwiperCarousel();
       // Inizializza Swiper una sola volta
-      this.initSwiper();
+      this.initSwiperLightbox();
 
       this.addEventListeners();
+      this.initFaq();
     },
 
-    initSwiper: function () {
+    initFaq: function () {
+      const faqToggle = document.querySelectorAll('.faq-item');
+      faqToggle.forEach(toggle => { 
+        toggle.addEventListener('click', () => {
+          const answer = toggle.querySelector('.faq-answer');
+
+          const icon = toggle.querySelector('.faq-icon');
+
+          if(answer.classList.contains('opacity-0')) {
+            answer.classList.remove('opacity-0');
+            answer.classList.remove('h-0');
+            answer.classList.add('mt-3');
+          } else {
+            answer.classList.add('opacity-0');
+            answer.classList.add('h-0');
+            answer.classList.remove('mt-3');
+          }
+          //answer.classList.toggle('visible', 'h-full');
+          icon.classList.toggle('rotate-180');
+        });
+      });
+    },
+
+
+    initSwiperCarousel: function () {
+      import('swiper').then(({ default: Swiper }) => {
+        import('swiper/modules').then(({ Pagination, Navigation }) => {
+          const swiperContainer = document.querySelector('.swiper-carousel');
+          const slidesPerView = parseInt(swiperContainer.getAttribute('data-slides-per-view')) || 3;
+          const autoplayDelay = parseInt(swiperContainer.getAttribute('data-autoplay-delay')) || 3000;
+  
+  
+          new Swiper('.swiper-carousel', {
+            modules: [Pagination, Navigation],
+            spaceBetween: 20,
+            slidesPerView: window.innerWidth < 768 ? 2 : slidesPerView, // Usa il valore dinamico
+            pagination: { el: '.swiper-carousel .swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-carousel .swiper-button-prev', prevEl: '.swiper-carousel.swiper-button-next' },
+            autoplay: { delay: autoplayDelay } // Attiva autoplay
+          });
+        });
+      });
+    },
+
+    initSwiperLightbox: function () {
       import('swiper').then(({ default: Swiper }) => {
         import('swiper/modules').then(({ Navigation }) => {
           this.lightboxSwiper = new Swiper('.lightbox-slider', {
             modules: [Navigation],
-            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            navigation: { nextEl: '.lightbox-slider .swiper-button-next', prevEl: '.lightbox-slider .swiper-button-prev' },
             loop: false, // Disabilita il loop
+            slidesPerView: 1,
             on: {
               // Aggiorna l'indice corrente ogni volta che cambia la slide
               slideChange: () => {
@@ -46,6 +97,7 @@ if (isBrowser) {
                 console.log("Slide cambiata. Indice corrente:", this.currentSlideIndex);
               },
             },
+            
           });
 
           console.log("Swiper inizializzato correttamente.");
@@ -76,6 +128,12 @@ if (isBrowser) {
         if (e.target === this.lightbox) {
           this.closeLightbox();
         }
+      });
+
+      this.closeLightBoxButton.addEventListener("click", (e) => {
+       
+          this.closeLightbox();
+       
       });
     },
 

@@ -1,6 +1,5 @@
 ---
 import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import Hero from '../components/Hero.astro';
 import Bullets from '../components/Bullets.astro'
 import RowColumns from '../components/RowColumns.astro'
@@ -8,15 +7,22 @@ import ProContro from '../components/ProContro.astro'
 import Rivolto from '../components/Rivolto.astro'
 import Certificazione from '../components/Certificazione.astro'
 import Gallery from '../components/Gallery.astro'
-
+import Step from '../components/Step.astro'
 import Layout from '../layouts/Layout.astro';
+import Cta from '../components/Cta.astro';
+import Faq from '../components/Faq.astro';
+import Footer from '../components/Footer.astro';
 import "../styles/global.css";
+
 import videoOne from '../assets/hero-video.webm?url'
 import processoApplicazione from '../assets/processo-di-applicazione.webm?url'
 import Check from '../assets/icone/check.svg?url'
 import imageColumn from '../assets/poliurea-soluzione-definitiva.webp?url'
 import Garanzia from '../assets/garanzia.jpg?url'
 import ChiSiamoImg from '../assets/chi-siamo.jpg?url'
+import DoveOperiamo from '../assets/dove-operiamo.webp?url'
+
+
 const GalleryImages = [
 	{src: "src/assets/gallery/1.webp?url"},
 	{src: "src/assets/gallery/2.webp?url"},
@@ -49,18 +55,18 @@ const GalleryImages = [
 	<h3 class="text-xl font-bold text-gray-50 leading-[1.2]">Tipologie di immobili <br>su cui possiamo aiutarti</h3>
 	<p class="text-medium text-gray-50 mt-5">Le soluzioni di impermeabilizzazione di Maestri della Poliurea <br>si adattano a diverse situazioni e tipologie di immobili. <br>Ecco alcune delle possibili applicazioni:</p>
 	<ul class="mt-3 w-full lg:w-8/12">
-		<li class="text-gray-50 flex items-center text-base font-semibold py-4 border-b-[1px] border-solid border-gray-400"><span><img src={Check} width="30" class="mr-3"/></span>Capannoni</li>
-		<li class="text-gray-50 flex items-center text-base font-semibold py-4 border-b-[1px] border-solid border-gray-400"><span><img src={Check} width="30" class="mr-3"/></span>Coperture e tetti piani
+		<li class="text-gray-50 flex items-center text-base font-semibold py-4 border-b-[1px] border-solid border-gray-400"><span><img src={Check} alt="elenco rappresentato da icona" width="30" class="mr-3"/></span>Capannoni</li>
+		<li class="text-gray-50 flex items-center text-base font-semibold py-4 border-b-[1px] border-solid border-gray-400"><span><img src={Check} alt="elenco rappresentato da icona" width="30" class="mr-3"/></span>Coperture e tetti piani
 		</li>
-		<li class="text-gray-50 flex items-center text-base font-semibold py-4 border-b-[1px] border-solid border-gray-400"><span><img src={Check} width="30" class="mr-3"/></span>Magazzino/Deposito
+		<li class="text-gray-50 flex items-center text-base font-semibold py-4 border-b-[1px] border-solid border-gray-400"><span><img src={Check} alt="elenco rappresentato da icona" width="30" class="mr-3"/></span>Magazzino/Deposito
 		</li>
-		<li class="text-gray-50 flex items-center text-base font-semibold py-4 border-b-[1px] border-solid border-gray-400"><span><img src={Check} width="30" class="mr-3"/></span>Parcheggi e Garage interrati
+		<li class="text-gray-50 flex items-center text-base font-semibold py-4 border-b-[1px] border-solid border-gray-400"><span><img src={Check} alt="elenco rappresentato da icona" width="30" class="mr-3"/></span>Parcheggi e Garage interrati
 		</li>
-		<li class="text-gray-50 flex items-center text-base font-semibold py-4 border-b-[1px] border-solid border-gray-400"><span><img src={Check} width="30" class="mr-3"/></span>Pavimenti Industriali e Commerciali
+		<li class="text-gray-50 flex items-center text-base font-semibold py-4 border-b-[1px] border-solid border-gray-400"><span><img src={Check} alt="elenco rappresentato da icona" width="30" class="mr-3"/></span>Pavimenti Industriali e Commerciali
 		</li>
-		<li class="text-gray-50 flex items-center text-base font-semibold py-4 border-b-[1px] border-solid border-gray-400"><span><img src={Check} width="30" class="mr-3"/></span>Edifici pubblici e statali
+		<li class="text-gray-50 flex items-center text-base font-semibold py-4 border-b-[1px] border-solid border-gray-400"><span><img src={Check} alt="elenco rappresentato da icona" width="30" class="mr-3"/></span>Edifici pubblici e statali
 		</li>
-		<li class="text-gray-50 flex items-center text-base font-semibold py-4"><span><img src={Check} width="30" class="mr-3"/></span>Altri tipologie di edifici industriali
+		<li class="text-gray-50 flex items-center text-base font-semibold py-4"><span><img src={Check} alt="elenco rappresentato da icona" width="30" class="mr-3"/></span>Altri tipologie di edifici industriali
 		</li>
 
 
@@ -113,5 +119,18 @@ const GalleryImages = [
 	</RowColumns>
 	<Certificazione></Certificazione>
 	<Gallery images={GalleryImages}></Gallery>
-
+	<RowColumns
+	source={DoveOperiamo}
+	bgColor="#ffffff"
+	reverse={true}
+	>
+	<h3 class="text-xl font-bold leading-[1.2] text-gray-800">Dove Operiamo	</h3>
+	<p class="text-medium mt-5 text-gray-800">
+		Maestri della Poliurea è attiva nelle seguenti regioni italiane, garantendo una presenza solida e coordinata.<br><br>
+		La nostra rete di aziende specializzate è guidata e coordinata centralmente, assicurando che ogni progetto sia gestito con la stessa qualità e professionalità. Grazie alla collaborazione sinergica tra le diverse entità regionali, possiamo garantire tempestività e efficienza in ogni fase del processo, dalla consulenza iniziale all’applicazione finale, mantenendo standard elevati in tutto il territorio nazionale.</p>
+	</RowColumns>
+	<Step></Step>
+	<Cta></Cta>
+	<Faq></Faq>
+	<Footer></Footer>
 </Layout>
