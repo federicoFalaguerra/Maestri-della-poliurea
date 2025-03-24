@@ -193,7 +193,7 @@ if (isBrowser) {
         setTimeout(() => {
           this.headerContainer.classList.remove('bg-white', 'p-5');
           this.logo.forEach(logo => {
-            logo.src = "/src/assets/logo-white.svg";
+            logo.src = "/assets/logo-white.svg";
           });
           //this.logo.src = "/src/assets/logo-white.svg";
           this.menuMobile.classList.remove('opacity-0', 'invisible');
