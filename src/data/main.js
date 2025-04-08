@@ -217,7 +217,7 @@ if (isBrowser) {
         //this.logo.src = "/src/assets/logo.svg";
         this.headerContainer.classList.add('bg-white', 'p-5');
         this.logo.forEach(logo => {
-          logo.src = "/src/assets/logo.svg";
+          logo.src = "/assets/logo.svg";
         });
         this.menuMobile.classList.add('opacity-0');
         this.menuMobile.classList.remove('opacity-100', 'visible', 'z-10');
