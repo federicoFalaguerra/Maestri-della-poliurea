@@ -18,6 +18,8 @@ if (isBrowser) {
     headerContainer: null,
     headerSticky: null,
     bandaPreventivo: null,
+    //openPreventivo: null,
+    //closePreventivo: null,
 
     init: function () {
       // HEADER
@@ -34,6 +36,9 @@ if (isBrowser) {
       this.heroSection = document.querySelector('.hero');
       this.headerSticky = document.querySelector('.header-sticky');
       this.bandaPreventivo = document.querySelector('.banda-preventivo');
+      this.btnPreventivo = document.querySelectorAll('.btn-preventivo');
+      this.popUp = document.querySelector('#popup');
+      this.closePopUp = document.querySelector('#close-popup');
     
       
       // LIGHTBOX
@@ -48,7 +53,32 @@ if (isBrowser) {
       this.initFaq();
       this.headerScroll();
       this.handleStickyElement();
+     // this.openPreventivo();
+     // this.closePreventivo();
     },
+
+    /* 
+    openPreventivo: function () {
+      const btnPreventivo = this.btnPreventivo;
+      const popUp = this.popUp;
+    
+      btnPreventivo.forEach(btn => {
+        btn.addEventListener('click', () => { 
+          popUp.classList.remove('hidden');
+       });
+      });
+    },
+
+    closePreventivo: function () {
+      const btnPreventivo = this.btnPreventivo;
+      const popUp = this.popUp;
+      const closePopUp = this.closePopUp;
+      closePopUp.addEventListener('click', () => {
+        popUp.classList.add('hidden');
+      });
+    },
+
+  */
 
     headerScroll: function () {
       const headerSticky = this.headerSticky;

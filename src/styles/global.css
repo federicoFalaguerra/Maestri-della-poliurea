@@ -83,3 +83,12 @@ body {
 .lightbox-slider .swiper-button-next {
   color: white;
 }
+
+.btn-preventivo:hover {
+  cursor: pointer;
+}
+
+#close-popup {
+  cursor: pointer;
+
+}
