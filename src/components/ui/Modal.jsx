@@ -52,7 +52,7 @@ const Modal = ({ isOpen, onClose, children, className = '' }) => {
 
   return (
     <div 
-      className={`fixed inset-0 z-50 flex items-center justify-center bg-[#0000008f] bg-opacity-60 p-4 ${className}`}
+      className={`fixed inset-0 z-1000 flex items-center justify-center bg-[#0000008f] bg-opacity-60 p-4 ${className}`}
       onClick={handleBackdropClick}
     >
       <div className="bg-white rounded-lg shadow-xl w-full max-w-xl p-6 relative">

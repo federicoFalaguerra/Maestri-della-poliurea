@@ -1,17 +1,17 @@
 import { useState } from 'react';
 
 export default function Step4({ onNext, onBack, formData }) {
-  const [servizio, setServizio] = useState(formData.servizio || '');
+  const [servizio3, setServizio3] = useState(formData.servizio3 || '');
   const [error, setError] = useState('');
 
   const handleNext = () => {
-    if (!servizio) {
+    if (!servizio3) {
     setError('Fai una scelta per continuare.');
       return;
     }
 
     setError('');
-    onNext({ servizio });
+    onNext({ servizio3 });
   };
 
 
@@ -21,17 +21,17 @@ export default function Step4({ onNext, onBack, formData }) {
         <h2 className='text-2xl font-semibold text-gray-800'>Quanto è grande la superficie? (circa)</h2>
         {['Da 100 a 300mq', 'Da 300 a 500 mq', '+ di 500mq', 'Non saprei '].map((option) => (
           <label key={option} className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-colors duration-300 font-semibold ${
-            servizio === option ? 'bg-green-100 border-2 border-green-500' : 'bg-gray-50 border-2 border-gray-200'
+            servizio3 === option ? 'bg-green-100 border-2 border-green-500' : 'bg-gray-50 border-2 border-gray-200'
           } hover:bg-green-50`}>
             <input
               type="radio"
-              name="servizio"
+              name="servizio3"
               value={option}
-              checked={servizio === option}
-              onChange={() => {setServizio(option); setError('');}}
+              checked={servizio3 === option}
+              onChange={() => {setServizio3(option); setError('');}}
               className='w-5 h-5 accent-green-600'
             />
-            <span className='text-medium text-gray-700'>{option.charAt(0).toUpperCase() + option.slice(1)}</span>
+            <span className='text-[16px] text-gray-700'>{option.charAt(0).toUpperCase() + option.slice(1)}</span>
           </label>
         ))}
         {error && <p className="text-red-600 text-sm mt-1 font-display">{error}</p>}

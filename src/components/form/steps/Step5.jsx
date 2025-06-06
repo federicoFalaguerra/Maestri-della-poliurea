@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
 export default function Step5({ onNext, onBack, formData }) {
-  const [servizio, setServizio] = useState(formData.servizio || '');
+  const [dettagli, setDettagli] = useState(formData.Dettagli || '');
 
   const handleNext = () => {
-    onNext({ servizio });
+    onNext({ dettagli });
   };
 
 
@@ -14,9 +14,9 @@ export default function Step5({ onNext, onBack, formData }) {
         <h2 className='text-2xl font-semibold text-gray-800'>Vuoi scriverci maggiori dettagli? (facoltativo)</h2>
         <div className="border-2 border-gray-200 rounded-lg p-3 bg-gray-50 hover:bg-gray-50 transition-colors duration-300">
           <textarea
-            name="servizio"
-            value={servizio}
-            onChange={(e) => setServizio(e.target.value)}
+            name="dettagli"
+            value={dettagli}
+            onChange={(e) => setDettagli(e.target.value)}
             rows="5"
             placeholder="Scrivi qui i dettagli (facoltativo)"
             className="w-full bg-transparent outline-none resize-none text-gray-700 font-display placeholder-gray-400"

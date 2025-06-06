@@ -55,7 +55,7 @@ export default function StepFinal({ formData, onSubmit, onBack, setIsSubmitted }
      
       const [emailResponse] = await Promise.allSettled([
         // Invio al tuo endpoint per l'email
-        fetch("https://landing.infissieinfissi.it/api/send.php", {
+        fetch("https://staging.maestridellapoliurea.it/api/send.php", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(localData)
@@ -73,7 +73,6 @@ export default function StepFinal({ formData, onSubmit, onBack, setIsSubmitted }
         console.error("Errore invio email:", emailResponse.reason);
       }
 
-      // Gestisci la risposta del proxy Zapier
      
       // Se almeno uno dei due invii è andato a buon fine, considera l'operazione riuscita
       if (emailSuccess) {
