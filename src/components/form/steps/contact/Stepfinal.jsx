@@ -23,6 +23,11 @@ export default function StepFinal({ formData, onSubmit, onBack, setIsSubmitted }
     }));
   }, [formData]);
 
+  const handleSubmit = (e) => {
+    e.preventDefault(); // ✅ Blocca il reload
+    onSubmit(localData); // ✅ Manda i dati al padre (Form.jsx)
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setLocalData(prev => ({ ...prev, [name]: value }));
@@ -103,6 +108,7 @@ export default function StepFinal({ formData, onSubmit, onBack, setIsSubmitted }
   };
 
   return (
+    <form onSubmit={handleSubmit}>
     <div className='space-y-6 bg-white mx-auto h-[450px] flex flex-col justify-between'>
       <div>
         <h2 className='text-2xl font-semibold text-gray-800 font-display'>Inserisci i tuoi dati per il preventivo</h2>
@@ -159,5 +165,6 @@ export default function StepFinal({ formData, onSubmit, onBack, setIsSubmitted }
         </button>
       </div>
     </div>
+    </form>
   );
 }

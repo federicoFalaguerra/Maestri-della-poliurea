@@ -37,8 +37,7 @@ export default function Form() {
 
   const goBack = () => setStepIndex(prev => prev - 1);
 
-  const handleFinalSubmit = (e, data) => {
-    e.preventDefault();
+  const handleFinalSubmit = (data) => {
     const finalData = { ...formData, ...data };
     console.log("Dati finali raccolti:", finalData);
     setIsSubmitted(true);
@@ -55,7 +54,7 @@ export default function Form() {
     }
 
     return (
-      <form onSubmit={(e) => e.preventDefault()}>
+      <>
         {stepIndex === 0 && (
           <Step1
             onNext={(data) => {
@@ -83,10 +82,10 @@ export default function Form() {
           <StepFinal
             formData={formData}
             onBack={goBack}
-            onSubmit={(data) => handleFinalSubmit(event, data)}
+            onSubmit={(data) => handleFinalSubmit(data)} 
           />
         )}
-      </form>
+      </>
     );
   };
 
