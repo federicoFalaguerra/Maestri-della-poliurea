@@ -15,7 +15,7 @@
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.6",
     "aos": "^2.3.4",
-    "astro": "^5.5.2",
+    "astro": "^5.9.3",
     "flowbite": "^3.1.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

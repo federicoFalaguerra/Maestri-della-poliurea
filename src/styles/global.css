@@ -38,6 +38,10 @@ body {
   background-color: #85BF31;
 }
 
+.btn-preventivo:hover {
+  background-color: #6fa81d;
+}
+
 .active span {
   background-color: white;
 }
