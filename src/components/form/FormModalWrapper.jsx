@@ -1,7 +1,7 @@
 // File: src/components/form/FormModalWrapper.jsx
 import React, { useState, useEffect } from 'react';
 import Modal from '../ui/Modal';
-import FormInfissiLineare from './Form.jsx'; // Il tuo form esistente
+import FormMaestri from './Form.jsx'; // Il tuo form esistente
 
 
 /**
@@ -32,7 +32,7 @@ const FormModalWrapper = () => {
   return (
     <Modal isOpen={isModalOpen} onClose={closeModal}>
       <div className="py-2">
-        <FormInfissiLineare />
+        <FormMaestri />
       </div>
     </Modal>
   );

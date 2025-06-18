@@ -134,7 +134,7 @@ export default function StepFinal({ formData, onSubmit, onBack, setIsSubmitted }
             className="mt-1 border-2 border-gray-200 rounded-lg w-5 h-5 accent-blue-600"
           />
           <label className="text-sm font-display font-semibold text-gray-700 w-full flex" htmlFor="privacyCheckbox">
-            Accetto&nbsp;<span className='hidden md:block'>Termini e Condizioni della&nbsp;</span> <a href="https://www.iubenda.com/privacy-policy/34705857" target="_blank" className="text-blue-600 underline" id='privacyAccepted'> Privacy Policy</a>.
+            Accetto&nbsp;<span className='hidden md:block'>Termini e Condizioni della&nbsp;</span> <a href="#" target="_blank" className="text-blue-600 underline" id='privacyAccepted'> Privacy Policy</a>.
           </label>
         </div>
       

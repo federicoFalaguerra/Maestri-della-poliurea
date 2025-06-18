@@ -22,7 +22,7 @@ export default function Step1({ onNext, formData }) {
   ];
 
   return (
-    <div className="space-y-6 bg-white rounded-lg mx-auto h-[300px] flex flex-col justify-between">
+    <div className="space-y-6 bg-white rounded-lg mx-auto min-h-[300px] flex flex-col justify-between">
       <h2 className="text-2xl font-semibold text-gray-800">A quale servizio sei interessato?
       </h2>
 

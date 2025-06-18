@@ -16,7 +16,7 @@ export default function Step2({ onNext, onBack, formData }) {
 
 
   return (
-    <div className="space-y-6 bg-white mx-auto h-[450px] flex flex-col justify-between">
+    <div className="space-y-6 bg-white mx-auto min-h-[450px] flex flex-col justify-between">
       <div className="flex flex-col gap-4">
         <h2 className='text-2xl font-semibold text-gray-800'>Che tipo di immobile è?</h2>
         {['Capannone', 'Edificio pubblico', 'Magazzino/Deposito', 'Altro edificio industriale'].map((option) => (

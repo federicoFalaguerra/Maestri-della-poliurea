@@ -57,28 +57,7 @@ if (isBrowser) {
      // this.closePreventivo();
     },
 
-    /* 
-    openPreventivo: function () {
-      const btnPreventivo = this.btnPreventivo;
-      const popUp = this.popUp;
-    
-      btnPreventivo.forEach(btn => {
-        btn.addEventListener('click', () => { 
-          popUp.classList.remove('hidden');
-       });
-      });
-    },
 
-    closePreventivo: function () {
-      const btnPreventivo = this.btnPreventivo;
-      const popUp = this.popUp;
-      const closePopUp = this.closePopUp;
-      closePopUp.addEventListener('click', () => {
-        popUp.classList.add('hidden');
-      });
-    },
-
-  */
 
     headerScroll: function () {
       const headerSticky = this.headerSticky;
@@ -216,7 +195,7 @@ if (isBrowser) {
     toggleMenu: function () {
       const headerHeight = this.header?.getBoundingClientRect();
       const headerContainer = this.headerContainer;
-      this.body.classList.add('overflow-y-hidden');
+      this.body.style.overflow = "hidden";
 
       if (this.menuMobile?.classList.contains('opacity-0')) {
         this.navigation.style.paddingTop = `${headerHeight.height}px`;
@@ -240,7 +219,7 @@ if (isBrowser) {
     },
 
     closeMenu: function () {
-      this.body.classList.remove('overflow-y-hidden');
+      this.body.style.overflow = "auto";
       const headerContainer = this.headerContainer;
 
       setTimeout(() => {

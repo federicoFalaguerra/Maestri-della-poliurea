@@ -9,7 +9,7 @@ export default function Step5({ onNext, onBack, formData }) {
 
 
   return (
-    <div className="space-y-6 bg-white mx-auto h-[450px] flex flex-col justify-between">
+    <div className="space-y-6 bg-white mx-auto min-h-[450px] flex flex-col justify-between">
       <div className="flex flex-col gap-4">
         <h2 className='text-2xl font-semibold text-gray-800'>Vuoi scriverci maggiori dettagli? (facoltativo)</h2>
         <div className="border-2 border-gray-200 rounded-lg p-3 bg-gray-50 hover:bg-gray-50 transition-colors duration-300">

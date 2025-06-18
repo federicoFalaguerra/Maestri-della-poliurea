@@ -90,7 +90,7 @@ export default function Form() {
   };
 
   return (
-    <div className="max-w-xl mx-auto p-6 bg-white rounded-lg space-y-6">
+    <div className="max-w-xl mx-auto py-6 bg-white rounded-lg space-y-6">
       {!isSubmitted  && (
         <div className="w-full bg-gray-200 rounded-full h-2">
           <div

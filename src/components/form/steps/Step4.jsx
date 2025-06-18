@@ -16,7 +16,7 @@ export default function Step4({ onNext, onBack, formData }) {
 
 
   return (
-    <div className="space-y-6 bg-white mx-auto h-[450px] flex flex-col justify-between">
+    <div className="space-y-6 bg-white mx-auto min-h-[450px] flex flex-col justify-between">
       <div className="flex flex-col gap-4">
         <h2 className='text-2xl font-semibold text-gray-800'>Quanto è grande la superficie? (circa)</h2>
         {['Da 100 a 300mq', 'Da 300 a 500 mq', '+ di 500mq', 'Non saprei '].map((option) => (
