@@ -1,9 +1,9 @@
-name: 🚀 Deploy su SiteGround
+name: 🚀 Deploy su Staging
 
 on:
   push:
     branches:
-      - main  # Cambia se usi un altro branch
+      - staging  # Cambia se usi un altro branch
 
 jobs:
   deploy:
