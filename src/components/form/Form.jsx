@@ -47,7 +47,7 @@ export default function Form() {
     if (isSubmitted) {
       return (
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-green-600">Grazie per aver inviato il modulo!</h2>
+          <h2 className="text-2xl font-bold text-green-600">Grazie per aver richiesto un preventivo gratuito!</h2>
           <p className="mt-4">Ti ricontatteremo al più presto.</p>
         </div>
       );

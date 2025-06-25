@@ -65,6 +65,11 @@ export default function StepFinal({ formData, onSubmit, onBack, setIsSubmitted }
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(localData)
         }),
+        fetch("https://maestridellapoliurea.it/api/proxy-zapier.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(localData)
+        }),
       ]);
       // Gestisci la risposta dell'endpoint email
       let emailSuccess = false;
@@ -78,9 +83,23 @@ export default function StepFinal({ formData, onSubmit, onBack, setIsSubmitted }
         console.error("Errore invio email:", emailResponse.reason);
       }
 
+      // Gestisci la risposta del proxy Zapier
+      let zapierSuccess = false;
+      if (zapierResponse.status === 'fulfilled') {
+        if (zapierResponse.value.ok) {
+          const zapierResult = await zapierResponse.value.json();
+          console.log("Risposta da Zapier:", zapierResult);
+          zapierSuccess = zapierResult.success;
+        } else {
+          const errorResult = await zapierResponse.value.json();
+          console.error("Errore proxy Zapier:", errorResult);
+        }
+      } else {
+        console.error("Errore invio Zapier:", zapierResponse.reason);
+      }
      
       // Se almeno uno dei due invii è andato a buon fine, considera l'operazione riuscita
-      if (emailSuccess) {
+      if (emailSuccess || zapierSuccess) {
         // Notifica il genitore che l'invio è avvenuto con successo
         if (onSubmit && typeof onSubmit === 'function') {
           onSubmit(localData);
@@ -94,6 +113,9 @@ export default function StepFinal({ formData, onSubmit, onBack, setIsSubmitted }
         // Log per debugging
         if (!emailSuccess) {
           console.warn("Invio email fallito,");
+        }
+        if (!zapierSuccess) {
+          console.warn("Invio Zapier fallito, ma email è riuscita");
         }
       } else {
         setErrorMsg("Errore nell'invio del modulo, riprova più tardi.");
