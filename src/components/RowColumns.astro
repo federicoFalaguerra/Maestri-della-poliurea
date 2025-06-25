@@ -1,10 +1,10 @@
 ---
-const {source, bgColor, reverse} = Astro.props;
+const {source, bgColor, reverse, id} = Astro.props;
 const isVideo = source && (source.endsWith('.mp4') || source.endsWith('.webm'));
 
 ---
 
-<section class="row flex justify-center mt-12 px-6" data-aos="fade-up">
+<section class="row flex justify-center mt-12 px-6" data-aos="fade-up" id={id}>
     <div class=`lg:p-20 p-8 container flex justify-between items-center gap-10 aos-init aos-animate rounded-3xl ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} flex-col` style={`background-color: ${bgColor};`}
     data-aos="fade-up">
         <div class="lg:w-1/2 w-full column">
