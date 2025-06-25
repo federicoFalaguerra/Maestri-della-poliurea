@@ -60,7 +60,7 @@ export default function StepFinal({ formData, onSubmit, onBack, setIsSubmitted }
      
       const [emailResponse] = await Promise.allSettled([
         // Invio al tuo endpoint per l'email
-        fetch("https://staging.maestridellapoliurea.it/api/send.php", {
+        fetch("https://maestridellapoliurea.it/api/send.php", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(localData)
