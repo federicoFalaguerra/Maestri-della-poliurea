@@ -58,7 +58,7 @@ export default function StepFinal({ formData, onSubmit, onBack, setIsSubmitted }
 
     try {
      
-      const [emailResponse] = await Promise.allSettled([
+      const [emailResponse, zapierResponse] = await Promise.allSettled([
         // Invio al tuo endpoint per l'email
         fetch("https://maestridellapoliurea.it/api/send.php", {
           method: "POST",
