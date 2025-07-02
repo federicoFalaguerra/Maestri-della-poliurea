@@ -9,9 +9,11 @@ export default function Step5({ onNext, onBack, formData }) {
 
 
   return (
-    <div className="space-y-6 bg-white mx-auto min-h-[450px] flex flex-col justify-between">
+    <>    
+    <div className='flex flex-col flex-auto'>
+    <div className="space-y-6 bg-white rounded-lg min-h-[300px] flex flex-col flex-auto">
       <div className="flex flex-col gap-4">
-        <h2 className='text-2xl font-semibold text-gray-800'>Vuoi scriverci maggiori dettagli? (facoltativo)</h2>
+        <h2 className='font-semibold text-gray-800 text-[20px] text-center'>Vuoi scriverci maggiori dettagli? (facoltativo)</h2>
         <div className="border-2 border-gray-200 rounded-lg p-3 bg-gray-50 hover:bg-gray-50 transition-colors duration-300">
           <textarea
             name="dettagli"
@@ -22,6 +24,7 @@ export default function Step5({ onNext, onBack, formData }) {
             className="w-full bg-transparent outline-none resize-none text-gray-700 font-display placeholder-gray-400"
           />
         </div>
+      </div>
       </div>
 
 
@@ -43,5 +46,7 @@ export default function Step5({ onNext, onBack, formData }) {
         </button>
       </div>
     </div>
+    </>
+
   );
 }

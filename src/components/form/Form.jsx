@@ -90,11 +90,11 @@ export default function Form() {
   };
 
   return (
-    <div className="max-w-xl mx-auto py-6 bg-white rounded-lg space-y-6">
+    <div className="max-w-xl mx-auto py-3 bg-white rounded-lg space-y-6 flex flex-col flex-auto">
       {!isSubmitted  && (
-        <div className="w-full bg-gray-200 rounded-full h-2">
+        <div className="w-[300px] bg-gray-200 rounded-full h-[4px] ml-auto mr-auto">
           <div
-            className="bg-green-600 h-2 rounded-full transition-all duration-500"
+            className="bg-green-600 h-[4px] rounded-full transition-all duration-500"
             style={{ width: `${progressPercent}%` }}
           ></div>
         </div>

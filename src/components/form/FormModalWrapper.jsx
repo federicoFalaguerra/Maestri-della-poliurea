@@ -31,7 +31,7 @@ const FormModalWrapper = () => {
   
   return (
     <Modal isOpen={isModalOpen} onClose={closeModal}>
-      <div className="py-2">
+      <div className="py-2 flex-auto flex">
         <FormMaestri />
       </div>
     </Modal>
