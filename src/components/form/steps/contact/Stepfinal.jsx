@@ -133,7 +133,7 @@ export default function StepFinal({ formData, onSubmit, onBack, setIsSubmitted }
     <form onSubmit={handleSubmit}>
     <div className='space-y-6 bg-white mx-auto h-[450px] flex flex-col justify-between'>
       <div>
-        <h2 className='text-2xl font-semibold text-gray-800 font-display'>Inserisci i tuoi dati per il preventivo</h2>
+        <h2 className='font-semibold text-gray-800 text-[20px] text-center'>Inserisci i tuoi dati per il preventivo</h2>
         <div className='mt-4'>
           <input name="cap" value={localData.cap} onChange={handleChange} className='border-2 border-gray-200 rounded-lg p-2 bg-gray-50 hover:bg-gray-50 transition-colors duration-300 w-full font-display font-semibold' placeholder='CAP' required  />
         </div>

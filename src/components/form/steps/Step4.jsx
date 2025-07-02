@@ -16,9 +16,11 @@ export default function Step4({ onNext, onBack, formData }) {
 
 
   return (
-    <div className="space-y-6 bg-white mx-auto min-h-[450px] flex flex-col justify-between">
+    <>    
+    <div className='flex flex-col flex-auto'>
+    <div className="space-y-6 bg-white rounded-lg min-h-[300px] flex flex-col flex-auto">
       <div className="flex flex-col gap-4">
-        <h2 className='text-2xl font-semibold text-gray-800'>Quanto è grande la superficie? (circa)</h2>
+        <h2 className='font-semibold text-gray-800 text-[20px] text-center'>Quanto è grande la superficie? (circa)</h2>
         {['Da 100 a 300mq', 'Da 300 a 500 mq', '+ di 500mq', 'Non saprei '].map((option) => (
           <label key={option} className={`flex items-center gap-3 p-3 rounded-lg cursor-pointer transition-colors duration-300 font-semibold ${
             servizio3 === option ? 'bg-green-100 border-2 border-green-500' : 'bg-gray-50 border-2 border-gray-200'
@@ -36,9 +38,10 @@ export default function Step4({ onNext, onBack, formData }) {
         ))}
         {error && <p className="text-red-600 text-sm mt-1 font-display">{error}</p>}
       </div>
+      </div>
 
 
-      <div className=" flex justify-between">
+      <div className=" flex justify-between py-6">
         <button
           type="button"
           onClick={onBack}
@@ -56,5 +59,6 @@ export default function Step4({ onNext, onBack, formData }) {
         </button>
       </div>
     </div>
+    </>
   );
 }
