@@ -56,7 +56,7 @@ const Modal = ({ isOpen, onClose, children, className = '' }) => {
       className={`fixed inset-0 z-1000 bg-[white] bg-opacity-60 ${className}`}
       onClick={handleBackdropClick}
     >
-      <div className='px-6 my-7 container'><img src={LogoUrl} alt="Logo" className="w-5/12 sm:w-4/12 md:w-3/12 lg:w-[200px]" /></div>
+      <div className='px-6 md:my-7 my-4 container'><img src={LogoUrl} alt="Logo" className="w-4/12 sm:w-3/12 md:w-3/12 lg:w-[200px] mx-auto lg:mx-0" /></div>
       <div className='flex justify-center'>
         <div className="bg-white border-[#e3e5e8] border-solid rounded-[8px] border-[1px] w-full max-w-[500px] p-6 relative max-h-[720px] min-h-[70vh] flex flex-col">
           <div className='flex items-center'>
