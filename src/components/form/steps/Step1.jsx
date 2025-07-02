@@ -50,7 +50,7 @@ export default function Step1({ onNext, formData }) {
         {error && <p className="text-red-600 text-sm mt-1 font-display">{error}</p>}
         </div>
       </div>
-      <div className="flex justify-end flex-initial py-3">
+      <div className="flex justify-end flex-initial py-4">
           <button
             type="button"
             onClick={handleNext}

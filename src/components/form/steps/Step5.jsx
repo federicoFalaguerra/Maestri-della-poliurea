@@ -28,7 +28,7 @@ export default function Step5({ onNext, onBack, formData }) {
       </div>
 
 
-      <div className=" flex justify-between py-3">
+      <div className=" flex justify-between py-6">
         <button
           type="button"
           onClick={onBack}

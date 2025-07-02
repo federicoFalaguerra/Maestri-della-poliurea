@@ -39,7 +39,7 @@ export default function Step2({ onNext, onBack, formData }) {
         {error && <p className="text-red-600 text-sm mt-1 font-display">{error}</p>}
       </div>
       </div>
-      <div className=" flex justify-between py-3">
+      <div className=" flex justify-between py-6">
         <button
           type="button"
           onClick={onBack}
