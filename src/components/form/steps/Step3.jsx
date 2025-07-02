@@ -40,7 +40,7 @@ export default function Step3({ onNext, onBack, formData }) {
       </div>
       </div>  
 
-      <div className=" flex justify-between">
+      <div className=" flex justify-between py-3">
         <button
           type="button"
           onClick={onBack}
